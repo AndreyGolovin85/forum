@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: "forum_db"
+      POSTGRES_USER: "forum"
+      POSTGRES_PASSWORD: "forum"
+    ports:
+      - "5432:5432"
