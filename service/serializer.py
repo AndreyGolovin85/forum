@@ -35,7 +35,6 @@ class PasswordValidator:
     pattern = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$"
 
     def __call__(self, value):
-        print(value)
         if re.match(self.pattern, value) is None:
             raise serializers.ValidationError("Пароль должен содержать цифры и буквы в верхнем и нижнем регистре. "
                                               "Пароль должен быть не менее 8 символов")
